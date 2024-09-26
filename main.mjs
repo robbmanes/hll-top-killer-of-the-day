@@ -227,7 +227,7 @@ function scheduleRestart() {
 
 client.once('ready', () => {
     console.log('Discord bot is ready and connected.');
-    setInterval(main, 15 * 1000);
+    setInterval(main, 300 * 1000);
     main();
     scheduleRestart();
 });
