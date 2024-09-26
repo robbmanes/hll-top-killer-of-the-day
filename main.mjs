@@ -142,9 +142,9 @@ function truncatePlayerNameRole(name, role, server, maxLength) {
 
 async function sendToDiscord(topPlayers) {
     const embed = new EmbedBuilder()
-        .setColor('#0099ff')
-        .setTitle('Top 20 Players with the highest kill count (All Servers)')
-        .setThumbnail('https://imgur.com/cYkTFeF.png')
+        .setColor('#D73C3C')
+        .setTitle("Glow's Daily Top Kills Leaderboard (All Servers)")
+        .setThumbnail('https://imgur.com/a/dod4Ynj.png')
         .setFooter({ text: 'Last Refresh', iconURL: 'https://i.imgur.com/9Iaiwje.png' })
         .setTimestamp();
 
@@ -153,7 +153,7 @@ async function sendToDiscord(topPlayers) {
             let rankIndicator = player.index <= 3 ? rankEmojis[player.index - 1] : `${player.index}.`;
             let playerEntry = `${rankIndicator} ${player.kills} - ${truncatePlayerNameRole(player.name, player.role, player.server, 44)}`;
             if (player.index <= 3) {
-                playerEntry = `${playerEntry}`;
+                playerEntry = `**${playerEntry}**`;
             }
             return playerEntry;
         }).join('\n');
