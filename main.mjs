@@ -144,7 +144,7 @@ async function sendToDiscord(topPlayers) {
     const embed = new EmbedBuilder()
         .setColor('#D73C3C')
         .setTitle("Glow's Daily Top Kills Leaderboard (All Servers)")
-        .setThumbnail('https://imgur.com/a/dod4Ynj.png')
+        .setThumbnail('https://i.imgur.com/OxOLa8i.png')
         .setFooter({ text: 'Last Refresh', iconURL: 'https://i.imgur.com/9Iaiwje.png' })
         .setTimestamp();
 
